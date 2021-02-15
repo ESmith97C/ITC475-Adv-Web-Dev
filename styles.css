@@ -13,6 +13,20 @@ header{
     background-color: lightblue;
 }
 
+#sunmoon{
+    padding-left: 10px;
+}
+
+#timeDisplay{
+    font-style: bold;
+    padding-right: 10px;
+}
+
+#greeting{
+    font-style: bold;
+    padding-left: 10px;
+}
+
 .bar{
     display: flex;
     background: lightgray;
@@ -174,8 +188,3 @@ footer p{
     }
 
 }
-
-
-
-
-
