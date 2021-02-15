@@ -14,7 +14,7 @@ var AmOrPM;
 if (today.getHours() >= 12){AmOrPM = "PM";}
 else{AmOrPM = "AM";}
 
-var finalTime = hours + ":" + minutes + ":" + seconds + AmOrPM;
+var finalTime = hours + ":" + minutes + ":" + seconds + " " + AmOrPM;
 
 document.getElementById('timeDisplay').innerHTML = finalTime;
 
