@@ -27,5 +27,5 @@ else if (today.getHours >= 12 && today.getHours <= 17){document.getElementById('
 else {document.getElementById('greeting').innerHTML = "Good Evening";}
 
 
-if (today.getHours >= 6 && today.getHours <= 18){document.getElementById('sunmoon').src='sun.png'}
-else {document.getElementById('sunmoon').src='moon.png'}
+if (today.getHours >= 6 && today.getHours <= 18){document.getElementById('sunmoon').src='images/sun.png'}
+else {document.getElementById('sunmoon').src='images/moon.png'}
