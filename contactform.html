@@ -29,45 +29,113 @@
       </nav>
     </section>
     <section class="intro">
-      <h1>Travel Packages</h1>
-      <p>We specialize in International Travel and Tours. Our expertise and experience can save you 100's of dollars. Aside from the money, you can also save your valuable time! You decide your budget and the time from your comfort zone, we will take care of the rest for an exceptional memory. Mega Travels is committed to service excellence and support for all our past, present and future customers. We are here today specifically for you! We remind ourselves everyday and every moment with sincere gratitude.</p>
+      <h1>Contact an Agent</h1>
+        <p>We would love to know more about your travel plans. Please fill out this contact form to get in touch with a travel agent.</p>
     </section>
+    
+    <script src="activitiesselector.js"></script>
 
-    <section class ="cards">
-      <div class="card" id="maldives" onclick ="show()">
-        <img src="images/maldives.PNG" alt="maldives" />
-        <h2><a href="##">Maldives Resort</a></h2>
-        <p class="original-price">$1800.99</p>
-        <p class="current-price">Price you pay <span>$999.99</span></p>
-        <p class="saving">You are saving $801</p>
-      </div>
-      <div class="card" id="mexico">
-        <img src="images/mexico.PNG" alt="mexico" />
-        <h2><a href="##">Mexico Resort (All Inclusive!)</a></h2>
-        <p class="original-price">$2999.99</p>
-        <p class="current-price">Price you pay <span>$2199.99</span></p>
-        <p class="saving">You are saving $800</p>
-      </div>
-      <div class="card" id="newzealand">
-        <img src="images/newzealand.PNG" alt="new zealand" />
-        <h2><a href="##">New Zealand Trek</a></h2>
-        <p class="original-price">$2499.99</p>
-        <p class="current-price">Price you pay <span>$2100.00</span></p>
-        <p class="saving">You are saving $399</p>
-      </div>
-      <div class="card" id="venice">
-        <img src="images/venice.PNG" alt="venice" />
-        <h2><a href="##">Venice Italy</a></h2>
-        <p class="original-price">$4100.99</p>
-        <p class="current-price">Price you pay <span>$3699.00</span></p>
-        <p class="saving">You are saving $400</p>
-      </div>
-    </section>
-<footer>
-  <p>Copyright Protected. All rights reserved.</p><br/>
-  <p>Mega Travels</p>
-  <p>mega@travels.com</p>
-</footer>
+    <p>Please select your destination:</p>
+    <input type="radio" id="NewZealandRadio" name="destination" onclick = "showNewZealandActivites()">
+    <label for="NewZealandRadio">New Zealand</label><br>
 
+    <input type="radio" id="MaldivesRadio" name="destination" onclick = "showMaldivesActivites()">
+    <label for="MaldivesRadio">Maldives, South Asia</label><br>
+
+    <input type="radio" id="VeniceRadio" name="destination" onclick = "showVeniceActivites()">
+    <label for="VeniceRadio">Venice, Italy</label><br>
+
+    <input type="radio" id="MexicoRadio" name="destination" onclick = "showMexicoActivites()">
+    <label for="MexicoRadio">Cancun</label>
+
+
+      <br>
+      <br>
+
+
+      <section id="activites">
+
+      <p>Please select your associated activites:</p>
+
+      <div id = "MaldivesActivites" style = "display:none">
+  
+          <input type ="checkbox" id="Museums"> </input>
+          <label for="Museums">Museums</label><br></br>
+  
+          <input type ="checkbox" id="Sailing"> </input>
+          <label for="Sailing">Sailing</label><br></br>
+  
+          <input type ="checkbox" id="Beach"> </input>
+          <label for="Beach">Beach</label><br></br>
+          
+          <input type ="checkbox" id="Boating"> </input>
+          <label for="Boating">Boating</label><br></br>
+  
+      </div>
+
+      <br>
+  
+      <div id = "MexicoActivites" style = "display:none">
+          
+          <input type ="checkbox" id="ParksAndRec"> </input>
+          <label for="ParksAndRec">Parks and Recreation</label><br></br>
+  
+          <input type ="checkbox" id="Beaches"> </input>
+          <label for="Beaches">Beachesn</label><br></br>
+  
+          <input type ="checkbox" id="Boating"> </input>
+          <label for="Boating">Boating</label><br></br>
+  
+          <input type ="checkbox" id="Snorkeling"> </input>
+          <label for="Snorkeling">Snorkeling</label><br></br>
+  
+      </div>
+
+      <br>
+  
+      <div id = "NewZealandActivites" style = "display:none">
+  
+          <input type ="checkbox" id="City Tours"> </input>
+          <label for="City Tours">City Tours</label><br></br>
+  
+          <input type ="checkbox" id="Sports"> </input>
+          <label for="Sports">Sports</label><br></br>
+  
+          <input type ="checkbox" id="Cycling"> </input>
+          <label for="Cycling">Cycling</label><br></br>
+          
+          <input type ="checkbox" id="Boating"> </input>
+          <label for="Boating">Boating</label><br></br>
+  
+      </div>
+
+      <br>
+  
+      <div id = "VeniceActivites" style = "display:none">
+  
+      <input type ="checkbox" id="Museums"> </input>
+          <label for="Museums">Museums</label><br></br>
+  
+          <input type ="checkbox" id="Theatre"> </input>
+          <label for="Theatre">Theatre</label><br></br>
+  
+          <input type ="checkbox" id="ParksAndRec"> </input>
+          <label for="ParksAndRec">Parks and Recreation</label><br></br>
+          
+          <input type ="checkbox" id="City Tours"> </input>
+          <label for="City Tours">City Tours</label><br></br>
+  
+      </div>
+
+
+  
+  
+  </section>
+
+      <footer>
+      <p>Copyright Protected. All rights reserved.</p><br/>
+      <p>Mega Travels</p>
+      <p>mega@travels.com</p>
+    </footer>
 </body>
 </html>
