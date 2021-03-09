@@ -1,32 +1,36 @@
 
-
-
-function showMaldivesActivites(){
-    document.getElementById("MaldivesActivites").style.visibility = "visible";
-    document.getElementById("MexicoActivites").style.visibility = "display:none";
-    document.getElementById("NewZealandActivites").style.visibility = "display:none";
-    document.getElementById("VeniceActivites").style.visibility = "display:none";
+function ShowHideNZDiv() {
+    var chkNZ = document.getElementById("chkNZ");
+    var dvNZActivities = document.getElementById("dvNZActivities");
+    dvNZActivities.style.display = chkNZ.checked ? "block" : "none";
+    dvMalActivities.style.display = "none";
+    dvITActivities.style.display = "none";
+    dvCanActivities.style.display = "none";
 }
 
-function showMexicoActivites(){
-    document.getElementById("MaldivesActivites").style.visibility = "display:none";
-    document.getElementById("MexicoActivites").style.visibility = "visible";
-    document.getElementById("NewZealandActivites").style.visibility = "display:none";
-    document.getElementById("VeniceActivites").style.visibility = "display:none";
+function ShowHideMalDiv() {
+    var chkMal = document.getElementById("chkMal");
+    var dvMalActivities = document.getElementById("dvMalActivities");
+    dvMalActivities.style.display = chkMal.checked ? "block" : "none";
+    dvNZActivities.style.display = "none";
+    dvITActivities.style.display = "none";
+    dvCanActivities.style.display = "none";
 }
 
-function showNewZealandActivites(){
-    document.getElementById("MaldivesActivites").style.visibility = "display:none";
-    document.getElementById("MexicoActivites").style.visibility = "display:none";
-    document.getElementById("NewZealandActivites").style.visibility = "visible";
-    document.getElementById("VeniceActivites").style.visibility = "display:none";
+function ShowHideITDiv() {
+    var chkIT = document.getElementById("chkIT");
+    var dvITActivities = document.getElementById("dvITActivities");
+    dvITActivities.style.display = chkIT.checked ? "block" : "none";
+    dvNZActivities.style.display = "none";
+    dvMalActivities.style.display = "none";
+    dvCanActivities.style.display = "none";
 }
 
-function showVeniceActivites(){
-    document.getElementById("MaldivesActivites").style.visibility = "display:none";
-    document.getElementById("MexicoActivites").style.visibility = "display:none";
-    document.getElementById("NewZealandActivites").style.visibility = "display:none";
-    document.getElementById("VeniceActivites").style.visibility = "visible";
+function ShowHideCanDiv() {
+    var chkCan = document.getElementById("chkCan");
+    var dvCanActivities = document.getElementById("dvCanActivities");
+    dvCanActivities.style.display = chkCan.checked ? "block" : "none";
+    dvNZActivities.style.display = "none";
+    dvMalActivities.style.display = "none";
+    dvITActivities.style.display = "none";
 }
-
-
