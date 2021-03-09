@@ -81,6 +81,23 @@ nav a:hover{
     margin: 10px;
 }
 
+input[type=submit]{
+    background-color: rgb(90, 185, 216);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;    
+}
+
+input[type=reset]{
+    background-color: rgb(145, 35, 35);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;    
+}
 
 @keyframes cardAnimation{
     from{
@@ -186,5 +203,7 @@ footer p{
     .card{
         display: inline-block;
     }
+
+
 
 }
