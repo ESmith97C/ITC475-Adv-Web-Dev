@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-
-
 <body>
     <header> 
         <img src ="images/mega travel logo.png" height="200px" alt="logo"/>
@@ -33,109 +31,155 @@
         <p>We would love to know more about your travel plans. Please fill out this contact form to get in touch with a travel agent.</p>
     </section>
     
-    <script src="activitiesselector.js"></script>
 
-    <p>Please select your destination:</p>
-    <input type="radio" id="NewZealandRadio" name="destination" onclick = "showNewZealandActivites()">
-    <label for="NewZealandRadio">New Zealand</label><br>
-
-    <input type="radio" id="MaldivesRadio" name="destination" onclick = "showMaldivesActivites()">
-    <label for="MaldivesRadio">Maldives, South Asia</label><br>
-
-    <input type="radio" id="VeniceRadio" name="destination" onclick = "showVeniceActivites()">
-    <label for="VeniceRadio">Venice, Italy</label><br>
-
-    <input type="radio" id="MexicoRadio" name="destination" onclick = "showMexicoActivites()">
-    <label for="MexicoRadio">Cancun</label>
-
-
-      <br>
-      <br>
-
-
-      <section id="activites">
-
-      <p>Please select your associated activites:</p>
-
-      <div id = "MaldivesActivites" style = "display:none">
-  
-          <input type ="checkbox" id="Museums"> </input>
-          <label for="Museums">Museums</label><br></br>
-  
-          <input type ="checkbox" id="Sailing"> </input>
-          <label for="Sailing">Sailing</label><br></br>
-  
-          <input type ="checkbox" id="Beach"> </input>
-          <label for="Beach">Beach</label><br></br>
+  <form name="ReservationForm">
           
-          <input type ="checkbox" id="Boating"> </input>
-          <label for="Boating">Boating</label><br></br>
+    <div class="selection">
+      <span><h3>Choose a destination to see activities</h3></span>
+      <br />
+      <label for ="chkNZ">
+        <input type="radio" id="chkNZ" name="destination" onclick="ShowHideNZDiv()" />
+         New Zealand
+      </label>
+      <label for ="chkMal">
+        <input type="radio" id="chkMal" name="destination" onclick="ShowHideMalDiv()" />
+         Maldives, South Asia
+      </label>
+      <label for ="chkIT">
+        <input type="radio" id="chkIT" name="destination" onclick="ShowHideITDiv()" />
+         Venice, Italy
+      </label>
+      <label for ="chkCan">
+        <input type="radio" id="chkCan" name="destination" onclick="ShowHideCanDiv()" />
+         Cancun
+      </label>
+
+    </div>
+      <br>
+      <br>
+
+
+      <script src="activitiesselector.js"></script>
+      <section id="activities">
+
+      <p><h3>Please select your associated activities:</h3></p>
+      <div class="activitiesGroup"></div>
+
+      <div id="dvMalActivities" style="display:none">
+  
+          <input type ="checkbox" id="MalMuseums" name ="MalMuseums" value="Museums">
+          <label for="MalMuseums">Museums</label><br></br>
+  
+          <input type ="checkbox" id="MalSailing" name ="MalSailing" value="Sailing">
+          <label for="MalSailing">Sailing</label><br></br>
+  
+          <input type ="checkbox" id="MalBeach" name ="MalBeach" value="Beach">
+          <label for="MalBeach">Beach</label><br></br>
+
+          <input type ="checkbox" id="MalHiking" name ="MalHiking" value="Hiking">
+          <label for="MalHiking">Hiking</label><br></br>
+          
+          <input type ="checkbox" id="MalBoating" name ="MalBoating" value="Boating">
+          <label for="MalBoating">Boating</label><br></br>
   
       </div>
 
       <br>
   
-      <div id = "MexicoActivites" style = "display:none">
+      <div id="dvCanActivities" style="display:none">
           
-          <input type ="checkbox" id="ParksAndRec"> </input>
-          <label for="ParksAndRec">Parks and Recreation</label><br></br>
+          <input type ="checkbox" id="CanParksAndRec" name ="CanParksAndRec" value="Parks and Recreation">
+          <label for="CanParksAndRec">Parks and Recreation</label><br></br>
   
-          <input type ="checkbox" id="Beaches"> </input>
-          <label for="Beaches">Beachesn</label><br></br>
+          <input type ="checkbox" id="CanBeaches" name ="CanBeaches" value="Beaches">
+          <label for="CanBeaches">Beaches</label><br></br>
   
-          <input type ="checkbox" id="Boating"> </input>
-          <label for="Boating">Boating</label><br></br>
+          <input type ="checkbox" id="CanBoating" name ="CanBoating" value="Boating">
+          <label for="CanBoating">Boating</label><br></br>
   
-          <input type ="checkbox" id="Snorkeling"> </input>
-          <label for="Snorkeling">Snorkeling</label><br></br>
+          <input type ="checkbox" id="CanSnorkeling" name ="CanSnorkeling" value="Snorkeling">
+          <label for="CanSnorkeling">Snorkeling</label><br></br>
   
       </div>
 
       <br>
   
-      <div id = "NewZealandActivites" style = "display:none">
+      <div id="dvNZActivities" style="display:none">
   
-          <input type ="checkbox" id="City Tours"> </input>
-          <label for="City Tours">City Tours</label><br></br>
+          <input type ="checkbox" id="NZCityTours" name ="NZCityTours" value="City Tours"> </input>
+          <label for="NZCityTours">City Tours</label><br></br>
   
-          <input type ="checkbox" id="Sports"> </input>
-          <label for="Sports">Sports</label><br></br>
+          <input type ="checkbox" id="NZSports" name ="NZSports" value="Sports"> </input>
+          <label for="NZSports">Sports</label><br></br>
   
-          <input type ="checkbox" id="Cycling"> </input>
-          <label for="Cycling">Cycling</label><br></br>
+          <input type ="checkbox" id="NZCycling" name ="NZCycling" value="Cycling"> </input>
+          <label for="NZCycling">Cycling</label><br></br>
+
+          <input type ="checkbox" id="NZMuseums" name ="NZMuseums" value="Museums"> </input>
+          <label for="NZMuseums">Museums</label><br></br>
           
-          <input type ="checkbox" id="Boating"> </input>
-          <label for="Boating">Boating</label><br></br>
+          <input type ="checkbox" id="NZBoating" name ="NZBoating" value="Boating"> </input>
+          <label for="NZBoating">Boating</label><br></br>
   
       </div>
 
       <br>
   
-      <div id = "VeniceActivites" style = "display:none">
+      <div id="dvITActivities" style="display:none">
   
-      <input type ="checkbox" id="Museums"> </input>
-          <label for="Museums">Museums</label><br></br>
+      <input type ="checkbox" id="ITMuseums" name ="ITMuseums" value="Museums"> </input>
+          <label for="ITMuseums">Museums</label><br></br>
   
-          <input type ="checkbox" id="Theatre"> </input>
-          <label for="Theatre">Theatre</label><br></br>
+          <input type ="checkbox" id="ITTheatre" name ="ITTheatre" value="Theatre"> </input>
+          <label for="ITTheatre">Theatre</label><br></br>
   
-          <input type ="checkbox" id="ParksAndRec"> </input>
-          <label for="ParksAndRec">Parks and Recreation</label><br></br>
+          <input type ="checkbox" id="ITParksAndRec" name ="ITParksAndRec" value="Parks and Recreation"> </input>
+          <label for="ITParksAndRec">Parks and Recreation</label><br></br>
           
-          <input type ="checkbox" id="City Tours"> </input>
-          <label for="City Tours">City Tours</label><br></br>
+          <input type ="checkbox" id="ITCityTours" name ="ITCityTours" value="City Tours"> </input>
+          <label for="ITCityTours">City Tours</label><br></br>
   
       </div>
+    </div>
+
+    <p><h3>Reservation Contact Form</h3></p><br></br>
+    
+      <form action="/action_page.php">
+
+      <label for ="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your first name..." required><br></br>
+
+      <label for ="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..." required><br></br>
+    
+      <label for ="email">Email Address</label>
+      <input type="email" id="email" name="emailaddress" placeholder="Your email address..." required><br></br>
+
+      <label for ="phone">Phone Number</label>
+      <input type="text" id="phone" name="phonenumber" placeholder="Your phone number..." pattern="[0-9]+"required><br></br>
+
+      <label for ="children">Number of Children</label>
+      <input type="number" id="children" name="numberofchildren" placeholder="Number of Children..." required><br></br>
+
+      <label for ="adults">Number of Adults</label>
+      <input type="number" id="adults" name="numberofadults" placeholder="Number of Adults..." required><br></br>
+
+      <label for ="date">Date of your Trip</label>
+      <input type="date" id="date" name="dateoftrip" placeholder="dd-mm-yyyy" min="2020-12-31" max="9999-12-31" required><br></br>
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Clear">
+
+  </form>
 
 
-  
-  
-  </section>
+
 
       <footer>
       <p>Copyright Protected. All rights reserved.</p><br/>
       <p>Mega Travels</p>
       <p>mega@travels.com</p>
     </footer>
+
 </body>
 </html>
