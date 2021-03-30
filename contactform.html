@@ -30,15 +30,17 @@
       <h1>Contact an Agent</h1>
         <p>We would love to know more about your travel plans. Please fill out this contact form to get in touch with a travel agent.</p>
     </section>
+
+    
     
 
-  <form name="ReservationForm">
-          
-    <div class="selection">
+  <form name="ReservationForm" action="confirm.php" method="post">
+
+    <div class="selection"> <!-- Radio Group for Destination -->
       <span><h3>Choose a destination to see activities</h3></span>
       <br />
       <label for ="chkNZ">
-        <input type="radio" id="chkNZ" name="destination" onclick="ShowHideNZDiv()" />
+        <input type="radio" id="chkNZ" name="destination" onclick="ShowHideNZDiv()"/>
          New Zealand
       </label>
       <label for ="chkMal">
@@ -65,7 +67,7 @@
       <p><h3>Please select your associated activities:</h3></p>
       <div class="activitiesGroup"></div>
 
-      <div id="dvMalActivities" style="display:none">
+      <div id="dvMalActivities" style="display:none"> <!-- Maldives Activities checkboxes -->
   
           <input type ="checkbox" id="MalMuseums" name ="MalMuseums" value="Museums">
           <label for="MalMuseums">Museums</label><br></br>
@@ -86,7 +88,7 @@
 
       <br>
   
-      <div id="dvCanActivities" style="display:none">
+      <div id="dvCanActivities" style="display:none"> <!-- Cancun (Mexico) Activities checkboxes -->
           
           <input type ="checkbox" id="CanParksAndRec" name ="CanParksAndRec" value="Parks and Recreation">
           <label for="CanParksAndRec">Parks and Recreation</label><br></br>
@@ -104,7 +106,7 @@
 
       <br>
   
-      <div id="dvNZActivities" style="display:none">
+      <div id="dvNZActivities" style="display:none"> <!-- New Zealand Activities checkboxes -->
   
           <input type ="checkbox" id="NZCityTours" name ="NZCityTours" value="City Tours"> </input>
           <label for="NZCityTours">City Tours</label><br></br>
@@ -124,8 +126,8 @@
       </div>
 
       <br>
-  
-      <div id="dvITActivities" style="display:none">
+
+      <div id="dvITActivities" style="display:none">  <!-- Italy Activities checkboxes -->
   
       <input type ="checkbox" id="ITMuseums" name ="ITMuseums" value="Museums"> </input>
           <label for="ITMuseums">Museums</label><br></br>
@@ -144,8 +146,6 @@
 
     <p><h3>Reservation Contact Form</h3></p><br></br>
     
-      <form action="/action_page.php">
-
       <label for ="fname">First Name</label>
       <input type="text" id="fname" name="firstname" placeholder="Your first name..." required><br></br>
 
@@ -166,6 +166,10 @@
 
       <label for ="date">Date of your Trip</label>
       <input type="date" id="date" name="dateoftrip" placeholder="dd-mm-yyyy" min="2020-12-31" max="9999-12-31" required><br></br>
+
+      <p id="selectedDestination"></p>
+
+      <p id="selectedActivities"></p>
 
       <input type="submit" value="Submit">
       <input type="reset" value="Clear">
