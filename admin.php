@@ -9,34 +9,18 @@
         <script src="welcome.js"></script>
     </header>
 
+
 <?php
+session_start();
 
-//Login Databasce
-CREATE TABLE users (
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-
-);
-
-define ('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'siteadmin');
-define('DB_PASSWORD','itc475');
-define('DB_NAME', 'demo');
-
-
-
-
-
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
 ?>
-
-
-
+ 
 
 <?php
-
-
 
 $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
